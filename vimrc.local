@@ -1,7 +1,5 @@
 set termguicolors
-colorscheme base16-solarized-dark
+syntax enable
+set background=dark
+colorscheme solarized
 set t_Co=256
-set foldmethod=indent
-
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {'regex': 'possibly useless use of a variable in void context'}

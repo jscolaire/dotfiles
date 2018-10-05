@@ -165,7 +165,7 @@ client.background $base07
 bar {
     ## remember to add your favourite status bar, i.e.,
     # status_command i3status
-    output eDP-1
+    output DVI-I-0
     status_command i3blocks
     # status_command lemonbar
         colors {

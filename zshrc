@@ -50,7 +50,7 @@ plugins=(git bundler rails ruby vim tmux docker debian)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/jcaro/.local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ac/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -96,16 +96,22 @@ clear
 apg -n 20 -m 15 -x 15 -M NC -E O0Ññ -t
 }
 
-nmrw () {
-    nmcli d disconnect wlan0
-    nmcli d connect wlan0
+pp () {
+    if [ ! $# -eq 2 ];then
+        echo "Usage: p <user> <host>"
+    else
+        pass private/MasterPassword | mpw -u $1 $2 - | xclip -selection c
+    fi
 }
-
-cwconnect () {
-    sftp u82467372@home594707516.1and1-data.host
+pw () {
+    if [ ! $# -eq 2 ];then
+        echo "Usage: p <user> <host>"
+    else
+        pass work/MasterPassword | mpw -u $1 $2 - | xclip -selection c
+    fi
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# export TERM=xterm-256color
-# export MPW_ASKPASS=ssh-askpass
+export TERM=xterm-256color
+

@@ -1,0 +1,44 @@
+font pango:Roboto Regular 14
+bindsym $mod+d exec rofi -show run
+bindsym $mod+Shift+b exec buku_run
+
+bindsym $mod+Shift+c exec "cat ~/.config/i3/colors ~/.config/i3/customized.$(hostname) ~/.config/i3/base > ~/.config/i3/config && i3-msg reload"
+
+#bindsym $mod+Delete exec i3lock-fancy
+bindsym --release $mod+Delete exec slock
+
+bindsym $mod+Ctrl Right move container to output right
+bindsym $mod+Ctrl Left move container to output left
+
+bindsym Print exec "scrot -e 'mv $f ~/tmp/'"
+bindsym $mod+Print exec "scrot -u -e 'mv $f ~/tmp/'"
+bindsym $mod+Ctrl b exec "xsel | buku -a"
+
+#exec xrandr --output DVI-I-1 --mode 1680x1050 --pos 1960x30 --rotate normal --output DP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DVI-D-1 --off
+exec xrandr --output DVI-I-1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 1680x0 --rotate normal --output HDMI-1 --off --output DVI-D-1 --off
+exec feh --bg-scale ~/Imágenes/wallpapers/selected.png
+exec compton -cf
+exec nm-applet
+exec dropbox start
+exec owncloud
+exec pasystray
+#exec xfce4-power-manager
+
+new_window pixel 1
+#
+
+#bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+#bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+#bindsym XF86AudioMute exec amixer set Master toggle
+
+hide_edge_borders both
+floating_minimum_size 150 x 75
+
+for_window [class="mpv"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Tor Browser"] floating enable
+for_window [class="Torbrowser-launcher"] floating enable
