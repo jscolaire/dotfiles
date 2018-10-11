@@ -1,24 +1,24 @@
-## Base16 Solarized Dark
-# Author: Ethan Schoonover (modified by aramisgithub)
+## Base16 Gruvbox dark, hard
+# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #002b36
-set $base01 #073642
-set $base02 #586e75
-set $base03 #657b83
-set $base04 #839496
-set $base05 #93a1a1
-set $base06 #eee8d5
-set $base07 #fdf6e3
-set $base08 #dc322f
-set $base09 #cb4b16
-set $base0A #b58900
-set $base0B #859900
-set $base0C #2aa198
-set $base0D #268bd2
-set $base0E #6c71c4
-set $base0F #d33682
+set $base00 #1d2021
+set $base01 #3c3836
+set $base02 #504945
+set $base03 #665c54
+set $base04 #bdae93
+set $base05 #d5c4a1
+set $base06 #ebdbb2
+set $base07 #fbf1c7
+set $base08 #fb4934
+set $base09 #fe8019
+set $base0A #fabd2f
+set $base0B #b8bb26
+set $base0C #8ec07c
+set $base0D #83a598
+set $base0E #d3869b
+set $base0F #d65d0e
 font pango:Roboto Regular 14
 bindsym $mod+d exec "rofi -modi window,run,drun,ssh -show run"
 bindsym $mod+Shift+b exec buku_run
@@ -238,7 +238,7 @@ client.background $base07
 bar {
     ## remember to add your favourite status bar, i.e.,
     # status_command i3status
-    output eDP-1
+    output Virtual1
     status_command i3blocks
     # status_command lemonbar
         colors {

@@ -50,7 +50,7 @@ plugins=(git bundler rails ruby vim tmux docker debian)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/jcaro/.local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/jcaro/.local/bin:/opt/android-studio/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
