@@ -111,6 +111,19 @@ pw () {
     fi
 }
 
+s () {
+    if [ ! $# -eq 3 ];then
+        echo "Usage s <port> <user> <host>"
+        exit 1
+    fi
+    pw $2 $3
+    if [ ! $? -eq 0 ];then
+        echo "Error at s function"
+        exit 1
+    fi
+    tsocks ssh -p $1 $2@$3
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export TERM=xterm-256color
