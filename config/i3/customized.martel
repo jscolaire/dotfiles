@@ -50,3 +50,21 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Tor Browser"] floating enable
 for_window [class="Torbrowser-launcher"] floating enable
+
+bar {
+    ## remember to add your favourite status bar, i.e.,
+    # status_command i3status
+    output eDP-1
+    status_command i3blocks
+    # status_command lemonbar
+        colors {
+        separator $base03
+        background $base01
+        statusline $base05
+        focused_workspace $base0C $base0D $base00
+        active_workspace $base02 $base02 $base07
+        inactive_workspace $base01 $base01 $base03
+        urgent_workspace $base08 $base08 $base07
+    }
+}
+

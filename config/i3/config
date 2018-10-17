@@ -20,28 +20,33 @@ set $base0D #268bd2
 set $base0E #6c71c4
 set $base0F #d33682
 font pango:Roboto Regular 14
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec "rofi -modi window,run,drun,ssh -show run"
 bindsym $mod+Shift+b exec buku_run
 
+#bindsym $mod+Shift+c reload
 bindsym $mod+Shift+c exec "cat ~/.config/i3/colors ~/.config/i3/customized.$(hostname) ~/.config/i3/base > ~/.config/i3/config && i3-msg reload"
 
-#bindsym $mod+Delete exec i3lock-fancy
 bindsym --release $mod+Delete exec slock
+#bindsym $mod+Delete exec xscreensaver-command -lock
+#bindsym $mod+Ctrl h exec "xscreensaver-command -lock && systemctl hibernate"
+#bindsym $mod+Ctrl s exec "xscreensaver-command -lock && systemctl suspend"
+#bindsym $mod+Ctrl p exec "xscreensaver-command -lock && systemctl poweroff"
 
-bindsym $mod+Ctrl Right move container to output right
-bindsym $mod+Ctrl Left move container to output left
+#bindsym $mod+Ctrl Right move container to output right
+#bindsym $mod+Ctrl Left move container to output left
 
 bindsym Print exec "scrot -e 'mv $f ~/tmp/'"
 bindsym $mod+Print exec "scrot -u -e 'mv $f ~/tmp/'"
 bindsym $mod+Ctrl b exec "xsel | buku -a"
 
-#exec xrandr --output DVI-I-1 --mode 1680x1050 --pos 1960x30 --rotate normal --output DP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DVI-D-1 --off
-exec xrandr --output DVI-I-1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 1680x0 --rotate normal --output HDMI-1 --off --output DVI-D-1 --off
+exec xrandr --output eDP-1 --mode 1600x900
+#exec xrandr --output eDP-1 --scale 0.8x0.8
 exec feh --bg-scale ~/Imágenes/wallpapers/selected.png
 exec compton -cf
+#exec xscreensaver -no-splash
 exec nm-applet
 exec dropbox start
-exec owncloud
+#exec megasync
 exec pasystray
 #exec xfce4-power-manager
 
@@ -51,6 +56,9 @@ new_window pixel 1
 #bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 #bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 #bindsym XF86AudioMute exec amixer set Master toggle
+
+bindsym XF86KbdBrightnessUp exec sudo keyboardlights -inc
+bindsym XF86KbdBrightnessDown exec sudo keyboardlights -dec
 
 hide_edge_borders both
 floating_minimum_size 150 x 75
@@ -67,7 +75,7 @@ for_window [class="Torbrowser-launcher"] floating enable
 bar {
     ## remember to add your favourite status bar, i.e.,
     # status_command i3status
-    output DVI-I-0
+    output eDP-1
     status_command i3blocks
     # status_command lemonbar
         colors {
