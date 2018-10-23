@@ -1,5 +1,5 @@
 [options]
-font = Hack Regular 18
+font = Hack Regular 14
 scrollback_lines = 50000
 [colors]
 # Base16 Solarized Dark
