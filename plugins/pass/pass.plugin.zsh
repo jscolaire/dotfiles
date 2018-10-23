@@ -35,3 +35,7 @@ s () {
     fi
     tsocks ssh -p $1 $2@$3
 }
+
+alias amazon="pw colaire@hotmail.es amazon.com"
+alias twitter="pw jscolaire twitter.com"
+alias reddit="pw jscolaire reddit.com"
