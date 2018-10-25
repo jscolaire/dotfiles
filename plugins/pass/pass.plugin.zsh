@@ -36,7 +36,7 @@ s () {
     tsocks ssh -p $1 $2@$3
 }
 
-alias amazon="pp colaire@hotmail.es amazon.com"
+alias amazon="pp colaire@hotmail.es amazon.es"
 alias twitter="pp jscolaire twitter.com"
 alias reddit="pp jscolaire reddit.com"
 alias github="pp jscolaire github.com"
