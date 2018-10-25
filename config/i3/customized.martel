@@ -1,4 +1,4 @@
-font pango:Roboto Regular 18
+font pango:Roboto Regular 14
 bindsym $mod+d exec "rofi -modi window,run,drun,ssh -show run"
 bindsym $mod+Shift+b exec buku_run
 
