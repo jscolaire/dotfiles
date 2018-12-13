@@ -41,4 +41,9 @@ alias twitter="pp jscolaire twitter.com"
 alias reddit="pp jscolaire reddit.com"
 alias github="pp jscolaire github.com"
 alias gitlakes="pp ac lakes.strangled.net"
+<<<<<<< HEAD
+alias vcenter="pw administrator vcsa.cibergroup.gc"
+alias vcsa="pw root vcsa.cibergroup.gc"
+=======
 alias dropb="pp jacaro37@gmail.com dropbox.com"
+>>>>>>> 18fe57d498cf86e9bfba44cf3765febed9c87db7
