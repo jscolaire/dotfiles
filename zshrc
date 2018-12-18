@@ -5,8 +5,9 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="alanpeabody"
+if [ -z $ZSH_THEME ];then
+  ZSH_THEME="robbyrussell"
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vim tmux docker debian pass ufw)
+plugins=(git vim tmux docker debian pass ufw anon)
 
 # User configuration
 
@@ -86,7 +87,9 @@ alias yl="youtube-dl"
 alias wmp3="wget --recursive --no-parent --continue --accept wav,mp3,flac,ogg --reject html,htm "
 # alias gnrpass="apg -n 30 -m 10 -x 10 -M SNCL -E \{\}\(\)\[\]\^\Ç\¡\!\?\¿\~\=\:\|\ç\:\,\;\*\ñ\'\"\`\' -t"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 export TERM=xterm-256color
 
+alias wimi="curl ipinfo.io/ip"
