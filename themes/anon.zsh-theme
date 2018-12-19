@@ -7,7 +7,7 @@ getmyip () {
 setprompt () {
   getmyip
   if [ $(grep $IP ~/dotfiles/servidores) > 0 ]; then
-    PROMPT="${ret_status} (%D{%L:%M:%S %p}$IP) %{$fg[cyan]%}%c%{$reset_color%} "
+    PROMPT="${ret_status} %{$fg[green]%}(%D{%L:%M:%S %p}$IP) %{$fg[cyan]%}%c%{$reset_color%} "
   else
     PROMPT="${ret_status} %{$fg[red]%}(%D{%L:%M:%S %p}$IP) %{$fg[cyan]%}%c%{$reset_color%} "
   fi
