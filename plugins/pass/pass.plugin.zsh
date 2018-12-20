@@ -33,7 +33,8 @@ s () {
         echo "Error at s function"
         return 1
     fi
-    tsocks ssh -p $1 $2@$3
+    ssh -p $1 $2@$3
+    #tsocks ssh -p $1 $2@$3
 }
 
 alias amazon="pp colaire@hotmail.es amazon.es"
