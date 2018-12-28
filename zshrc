@@ -87,8 +87,9 @@ alias yl="youtube-dl"
 alias wmp3="wget --recursive --no-parent --continue --accept wav,mp3,flac,ogg --reject html,htm "
 # alias gnrpass="apg -n 30 -m 10 -x 10 -M SNCL -E \{\}\(\)\[\]\^\Ç\¡\!\?\¿\~\=\:\|\ç\:\,\;\*\ñ\'\"\`\' -t"
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+# copy from /usr/share/doc/fzf/examples/key-bindings.zsh if
+# package is installed or from repository if it's cloned
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export TERM=xterm-256color
 

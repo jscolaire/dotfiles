@@ -7,3 +7,8 @@ set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
+
+nnoremap bp :bp<CR>
+nnoremap bn :bn<CR>
+nnoremap bl :ls<CR>
+nnoremap bb :ls<CR>:b"
